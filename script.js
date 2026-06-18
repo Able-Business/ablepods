@@ -1,5 +1,5 @@
 /* ============================================================
-   AblePods — interactions
+   AblePods - interactions
    ============================================================ */
 (function () {
   "use strict";
@@ -79,13 +79,12 @@
   const form = document.getElementById("leadForm");
   if (form) {
     const fsBars = Array.from(form.querySelectorAll(".form-steps .fs"));
-    const fields = ["name", "email", "beds"]; // 3 logical steps
 
     function updateProgress() {
       let done = 0;
       if (form.name.value.trim()) done = 1;
       if (form.email.value.trim() && form.postcode.value.trim()) done = 2;
-      if (form.beds.value) done = 3;
+      if (form.message.value.trim()) done = 3;
       fsBars.forEach((b, i) => b.classList.toggle("on", i < Math.max(done, 1)));
     }
     form.addEventListener("input", updateProgress);

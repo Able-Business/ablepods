@@ -1,5 +1,5 @@
 /* ============================================================
-   AblePods — Modular Granny Flats
+   AblePods - Modular Granny Flats
    Design system: architectural minimalism × Australian coastal/bush
    ============================================================ */
 
@@ -305,11 +305,12 @@ img { max-width: 100%; display: block; }
 .form-steps .fs.on { background: var(--eucalyptus); }
 .field { margin-bottom: 18px; }
 .field label { display: block; font-size: .82rem; font-weight: 600; font-family: var(--font-head); margin-bottom: 7px; color: var(--slate); }
-.field input, .field select {
+.field input, .field select, .field textarea {
   width: 100%; padding: 14px 16px; border-radius: 12px; border: 1.5px solid var(--line);
   font-family: var(--font-body); font-size: 1rem; background: var(--white); color: var(--slate); transition: border-color .2s;
 }
-.field input:focus, .field select:focus { outline: none; border-color: var(--eucalyptus); }
+.field textarea { resize: vertical; min-height: 96px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--eucalyptus); }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .lead-form .btn { width: 100%; justify-content: center; margin-top: 6px; }
 .form-note { font-size: .78rem; color: var(--slate-soft); text-align: center; margin-top: 14px; }
