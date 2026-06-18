@@ -172,9 +172,9 @@ img { max-width: 100%; display: block; }
 .purpose-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .purpose-card {
   position: relative; border-radius: var(--radius-lg); overflow: hidden;
-  min-height: 360px; cursor: pointer; color: #fff;
+  min-height: 360px; color: #fff;
   display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 32px; border: 2px solid transparent; transition: transform .3s ease, box-shadow .3s ease;
+  padding: 32px; transition: transform .3s ease, box-shadow .3s ease;
 }
 .purpose-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 .purpose-card.active { border-color: var(--slate); box-shadow: var(--shadow); }

@@ -37,44 +37,6 @@
   );
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-  /* ---- Model filtering (shared by purpose cards + pills) ---- */
-  const cards = Array.from(document.querySelectorAll(".model-card"));
-  const pills = Array.from(document.querySelectorAll(".pill"));
-  const purposeCards = Array.from(document.querySelectorAll(".purpose-card"));
-
-  function applyFilter(filter) {
-    cards.forEach((card) => {
-      const purposes = card.getAttribute("data-purpose") || "";
-      const match = filter === "all" || purposes.split(/\s+/).includes(filter);
-      card.classList.toggle("hidden", !match);
-    });
-    pills.forEach((p) => p.classList.toggle("active", p.dataset.filter === filter));
-    purposeCards.forEach((c) =>
-      c.classList.toggle("active", c.dataset.purpose === filter)
-    );
-  }
-
-  pills.forEach((p) =>
-    p.addEventListener("click", () => applyFilter(p.dataset.filter))
-  );
-
-  purposeCards.forEach((c) => {
-    const select = () => {
-      const isActive = c.classList.contains("active");
-      applyFilter(isActive ? "all" : c.dataset.purpose);
-      if (!isActive) {
-        document.getElementById("models").scrollIntoView({ behavior: "smooth" });
-      }
-    };
-    c.addEventListener("click", select);
-    c.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        select();
-      }
-    });
-  });
-
   /* ---- Lead form: progress + submit ---- */
   const form = document.getElementById("leadForm");
   if (form) {
