@@ -172,7 +172,7 @@ img { max-width: 100%; display: block; }
 .purpose-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .purpose-card {
   position: relative; border-radius: var(--radius-lg); overflow: hidden;
-  min-height: 360px; color: #fff;
+  min-height: 360px; color: #fff; isolation: isolate;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 32px; transition: transform .3s ease, box-shadow .3s ease;
 }
@@ -193,6 +193,7 @@ img { max-width: 100%; display: block; }
    MODELS
    ============================================================ */
 .models { background: var(--offwhite); }
+.models-note { max-width: 780px; margin: 0 0 42px; font-size: .92rem; color: var(--slate-soft); padding: 16px 20px; background: var(--eucalyptus-tint); border-radius: 14px; border-left: 3px solid var(--eucalyptus); }
 .models-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 44px; }
 .filter-pills { display: flex; gap: 10px; flex-wrap: wrap; }
 .pill {
