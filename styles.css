@@ -172,7 +172,7 @@ img { max-width: 100%; display: block; }
 }
 .hero h1 .clay { color: var(--clay); }
 .hero .lede { font-family: var(--font); text-transform: none; font-size: clamp(1rem, 1.5vw, 1.2rem); color: rgba(243,239,230,.9); max-width: 50ch; line-height: 1.5; margin-bottom: 34px; }
-.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 52px; }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-stats { display: grid; grid-template-columns: repeat(4, max-content); gap: 0; border-top: 1px solid rgba(243,239,230,.3); }
 .hero-stats .stat { padding: 20px 34px 0 0; margin-right: 34px; border-right: 1px solid rgba(243,239,230,.25); }
 .hero-stats .stat:last-child { border-right: 0; margin-right: 0; }
