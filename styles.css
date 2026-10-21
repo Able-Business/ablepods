@@ -311,5 +311,8 @@ img { max-width: 100%; display: block; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .hero-values { grid-template-columns: 1fr 1fr; gap: 24px 0; }
   .hero-values .hv { border-right: 0; margin-right: 0; padding-right: 20px; }
-  .field-row { grid-template-columns: 1fr; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+  .footer ul { gap: 0; }
+  .footer ul a { display: inline-block; padding: 14px 0; }
 }
