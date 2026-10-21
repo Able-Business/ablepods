@@ -17,8 +17,9 @@
   --line:       #1a1915;   /* structural hairline */
   --line-soft:  rgba(26, 25, 21, 0.16);
 
+  /* Single typeface across the whole site */
   --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  --mono: "Archivo", "Helvetica Neue", Arial, sans-serif;
 
   --maxw: 1240px;
   --gutter: 32px;
@@ -206,7 +207,7 @@ img { max-width: 100%; display: block; }
    MODELS
    ============================================================ */
 .models { background: var(--paper-2); }
-.models-note { font-family: var(--font); font-size: 0.9rem; color: var(--ink-2); line-height: 1.6; max-width: 82ch; margin: 0 0 44px; padding: 20px 24px; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--clay); }
+.models-note { font-size: 0.92rem; color: var(--ink-2); line-height: 1.65; max-width: 60ch; margin: 0 0 44px; padding-left: 18px; border-left: 2px solid var(--clay); }
 .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: -1px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .model-card { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper); display: flex; flex-direction: column; transition: background .2s ease; }
 .model-card:hover { background: var(--paper); }
@@ -233,13 +234,15 @@ img { max-width: 100%; display: block; }
 .journey .sec-index b { color: var(--paper); }
 .journey .section-head h2 { color: var(--paper); }
 .journey .section-head p { color: rgba(243,239,230,.72); }
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(243,239,230,.28); }
-.step { padding: 36px 30px 40px 0; margin-right: 30px; border-right: 1px solid rgba(243,239,230,.2); position: relative; }
+.uses { background: var(--paper); }
+.process-head { margin-top: 74px; padding-top: 22px; border-top: 1px solid var(--line); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.95rem; color: var(--ink); margin-bottom: 44px; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.step { padding: 34px 30px 36px 0; margin-right: 30px; border-right: 1px solid var(--line-soft); position: relative; }
 .step:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
-.step .snum { font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; letter-spacing: -0.04em; line-height: 0.8; color: transparent; -webkit-text-stroke: 1.5px var(--clay); margin-bottom: 28px; }
-.step h3 { font-size: 1.35rem; color: var(--paper); margin-bottom: 12px; }
-.step p { font-family: var(--font); text-transform: none; font-size: 0.95rem; color: rgba(243,239,230,.72); line-height: 1.55; }
-.step .step-meta { margin-top: 16px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); }
+.step .snum { font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; letter-spacing: -0.04em; line-height: 0.8; color: transparent; -webkit-text-stroke: 1.5px var(--clay); margin-bottom: 26px; }
+.step h3 { font-size: 1.35rem; color: var(--ink); margin-bottom: 12px; }
+.step p { font-family: var(--font); text-transform: none; font-size: 0.95rem; color: var(--ink-2); line-height: 1.55; }
+.step .step-meta { margin-top: 16px; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--clay); }
 
 /* ============================================================
    LEAD
@@ -317,7 +320,7 @@ img { max-width: 100%; display: block; }
   .purpose-cards { grid-template-columns: 1fr 1fr; }
   .model-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; border-top: 0; }
-  .step { border-right: 0; margin-right: 0; padding-right: 0; border-bottom: 1px solid rgba(243,239,230,.2); }
+  .step { border-right: 0; margin-right: 0; padding-right: 0; border-bottom: 1px solid var(--line-soft); }
   .step:last-child { border-bottom: 0; }
   .lead-inner { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
