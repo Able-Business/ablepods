@@ -244,7 +244,7 @@
         </ul>
       </div>
 
-      <form class="lead-form reveal" id="leadForm" novalidate>
+      <form class="lead-form reveal" id="leadForm" method="post" enctype="multipart/form-data" novalidate>
         <div class="form-fields">
           <div class="field">
             <label for="name">Full name</label>
@@ -263,6 +263,19 @@
           <div class="field">
             <label for="message">Your comments</label>
             <textarea id="message" name="message" rows="4" placeholder="Tell us about your block or what you have in mind"></textarea>
+          </div>
+          <div class="field field-files">
+            <label for="files">Attachments <span class="opt">(optional)</span></label>
+            <input type="file" id="files" name="attachments" class="file-input" multiple
+              accept=".jpg,.jpeg,.png,.heic,.heif,.pdf,image/jpeg,image/png,image/heic,image/heif,application/pdf"
+              aria-describedby="filesHint filesError" />
+            <label for="files" class="dropzone" id="dropzone">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+              <span class="dz-main"><b>Add photos or plans</b><span class="dz-drag"> or drag them here</span></span>
+              <span class="dz-hint" id="filesHint">JPG, PNG, HEIC or PDF. Up to 5 files, 10MB each.</span>
+            </label>
+            <ul class="file-list" id="fileList"></ul>
+            <p class="field-error" id="filesError" role="alert"></p>
           </div>
           <button type="submit" class="btn btn-solid">Get my quote <span class="arrow">→</span></button>
           <p class="form-note">Your details stay private. No deposit, no obligation.</p>
