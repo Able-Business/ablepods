@@ -182,7 +182,7 @@ img { max-width: 100%; display: block; }
 /* ============================================================
    VALUES
    ============================================================ */
-.values { background: var(--ink); color: var(--paper); }
+.values { background: var(--ink); color: var(--paper); padding-top: 0; }
 .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid rgba(243,239,230,.22); }
 .value-card { padding: 34px 28px 40px; border-right: 1px solid rgba(243,239,230,.22); min-height: 260px; display: flex; flex-direction: column; }
 .value-card:last-child { border-right: 0; }
