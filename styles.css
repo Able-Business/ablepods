@@ -274,14 +274,7 @@ img { max-width: 100%; display: block; }
 /* ============================================================
    FOOTER
    ============================================================ */
-.footer { background: var(--ink); color: rgba(243,239,230,.6); padding: 70px 0 30px; }
-.footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(243,239,230,.2); }
-.footer .brand { color: var(--paper); margin-bottom: 18px; }
-.footer-about p { font-family: var(--font); font-size: 0.92rem; max-width: 34ch; line-height: 1.6; }
-.footer h4 { font-family: var(--mono); font-weight: 500; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--stone); margin-bottom: 18px; }
-.footer ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-.footer ul a { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(243,239,230,.65); }
-.footer ul a:hover { color: var(--clay); }
+.footer { background: var(--ink); color: rgba(243,239,230,.6); padding: 30px 0; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(243,239,230,.5); }
 
 /* ---------- Reveal ---------- */
@@ -300,7 +293,6 @@ img { max-width: 100%; display: block; }
   .step { border-right: 0; margin-right: 0; padding-right: 0; border-bottom: 1px solid var(--line-soft); }
   .step:last-child { border-bottom: 0; }
   .lead-inner { grid-template-columns: 1fr; gap: 40px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 680px) {
   :root { --gutter: 20px; }
@@ -309,11 +301,8 @@ img { max-width: 100%; display: block; }
   .value-card { border-right: 0 !important; border-bottom: 1px solid rgba(243,239,230,.22); min-height: 0; }
   .purpose-cards { grid-template-columns: 1fr; }
   .model-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
   .hero-values { grid-template-columns: 1fr 1fr; gap: 24px 0; }
   .hero-values .hv { border-right: 0; margin-right: 0; padding-right: 20px; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
   .hero-ctas .btn { width: 100%; justify-content: center; }
-  .footer ul { gap: 0; }
-  .footer ul a { display: inline-block; padding: 14px 0; }
 }
