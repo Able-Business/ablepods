@@ -98,9 +98,9 @@ img { max-width: 100%; display: block; }
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; gap: 12px;
-  font-family: var(--mono); font-weight: 600; font-size: 0.78rem;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 16px 26px; border: 1px solid var(--ink);
+  font-family: var(--font); font-weight: 700; font-size: 0.86rem;
+  letter-spacing: 0.01em; text-transform: none;
+  padding: 15px 26px; border: 1px solid var(--ink);
   cursor: pointer; transition: background .18s ease, color .18s ease, transform .18s ease;
   border-radius: 0;
 }
@@ -142,8 +142,8 @@ img { max-width: 100%; display: block; }
 .brand .mark i { width: 9px; height: 9px; background: var(--clay); display: block; }
 .nav-links { display: flex; align-items: center; gap: 30px; white-space: nowrap; }
 .nav-links a {
-  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em;
-  text-transform: uppercase; color: rgba(243,239,230,.85);
+  font-family: var(--font); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.01em;
+  color: rgba(243,239,230,.85);
 }
 .nav.scrolled .nav-links a { color: var(--ink-2); }
 .nav-links a:hover { color: var(--clay); }
@@ -250,7 +250,7 @@ img { max-width: 100%; display: block; }
 .lead-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .lead h2 { font-size: clamp(2rem, 4vw, 3.2rem); color: var(--paper); max-width: 14ch; }
 .lead .sub { font-family: var(--font); text-transform: none; font-size: 1.05rem; color: rgba(243,239,230,.9); margin: 20px 0 28px; max-width: 42ch; line-height: 1.5; }
-.lead-points { list-style: none; display: flex; flex-direction: column; }
+.lead-points { list-style: none; display: flex; flex-direction: column; margin-top: 32px; }
 .lead-points li { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 15px 0; border-top: 1px solid rgba(243,239,230,.35); display: flex; gap: 14px; align-items: baseline; }
 .lead-points li:last-child { border-bottom: 1px solid rgba(243,239,230,.35); }
 .lead-points li b { color: var(--paper); font-weight: 600; }
