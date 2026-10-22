@@ -225,7 +225,6 @@ img { max-width: 100%; display: block; }
 .u { text-transform: none; }
 .model-card { min-width: 0; }
 .model-card .model-specs { flex-wrap: wrap; row-gap: 6px; }
-.plans-note { font-size: 0.82rem; color: var(--taupe); max-width: 70ch; margin-top: 22px; }
 .model-link:hover { color: var(--clay); border-color: var(--clay); gap: 11px; transition: gap .2s ease; }
 
 /* ============================================================
