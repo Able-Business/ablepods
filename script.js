@@ -28,6 +28,38 @@
   );
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
+  /* ---- Floor plan cards: swipe or tap between plan and photo ---- */
+  document.querySelectorAll(".model-media").forEach((media) => {
+    const track = media.querySelector(".slides");
+    const tabs = Array.from(media.querySelectorAll(".slide-tabs button"));
+    if (!track || !tabs.length) return;
+
+    function setActive(i) {
+      tabs.forEach((t, n) => {
+        t.classList.toggle("on", n === i);
+        t.setAttribute("aria-pressed", n === i ? "true" : "false");
+      });
+    }
+    tabs.forEach((t, i) =>
+      t.addEventListener("click", () => {
+        track.scrollTo({ left: i * track.clientWidth });
+        setActive(i);
+      })
+    );
+    track.addEventListener("scroll", () => setActive(Math.round(track.scrollLeft / track.clientWidth)), { passive: true });
+
+    // If the photo fails to load, show the floor plan on its own
+    const photo = track.querySelector(".slide-photo");
+    function dropPhoto() {
+      photo.remove();
+      media.querySelector(".slide-tabs").remove();
+    }
+    if (photo) {
+      if (photo.complete && !photo.naturalWidth && photo.currentSrc) dropPhoto();
+      else photo.addEventListener("error", dropPhoto);
+    }
+  });
+
   /* ---- Lead form: submit ---- */
   const form = document.getElementById("leadForm");
   if (form) {
@@ -104,11 +136,11 @@
       addFiles(e.dataTransfer.files);
     });
 
-    /* ---- "Ask about this plan" pre-fills the comments ---- */
-    document.querySelectorAll("[data-plan]").forEach((link) =>
+    /* ---- "Ask about this plan" starts the comments for the visitor ---- */
+    document.querySelectorAll(".model-link").forEach((link) =>
       link.addEventListener("click", () => {
         const msg = form.querySelector("#message");
-        if (!msg.value.trim()) msg.value = "I'm interested in " + link.dataset.plan + ".";
+        if (!msg.value.trim()) msg.value = "I'd like a quote for one of your floor plans.";
       })
     );
 
