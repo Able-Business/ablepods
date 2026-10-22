@@ -104,6 +104,14 @@
       addFiles(e.dataTransfer.files);
     });
 
+    /* ---- "Ask about this plan" pre-fills the comments ---- */
+    document.querySelectorAll("[data-plan]").forEach((link) =>
+      link.addEventListener("click", () => {
+        const msg = form.querySelector("#message");
+        if (!msg.value.trim()) msg.value = "I'm interested in " + link.dataset.plan + ".";
+      })
+    );
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       if (!form.checkValidity()) {

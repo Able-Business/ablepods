@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 660" font-family="Archivo, Helvetica, Arial, sans-serif">
+<rect width="850" height="660" fill="#fbf9f4"/>
+<g transform="translate(70,70)">
+<polygon points="0,0 340,0 340,340 0,340" fill="#e6ecf4" stroke="#0b1f3a" stroke-width="3"/>
+<text x="170" y="133" font-size="30" font-weight="700" fill="#0b1f3a" text-anchor="middle" dominant-baseline="middle">Bedroom</text>
+<text x="170" y="169" font-size="24" font-weight="400" fill="#5b6577" text-anchor="middle" dominant-baseline="middle">3.4 × 3.4</text>
+<text x="170" y="205" font-size="24" font-weight="400" fill="#5b6577" text-anchor="middle" dominant-baseline="middle">11.6 m²</text>
+<polygon points="0,340 120,340 120,560 0,560" fill="#efe9dd" stroke="#0b1f3a" stroke-width="3"/>
+<text x="60" y="450" font-size="20" font-weight="700" fill="#0b1f3a" text-anchor="middle" dominant-baseline="middle">Robe</text>
+<polygon points="120,340 340,340 340,560 120,560" fill="#efe9dd" stroke="#0b1f3a" stroke-width="3"/>
+<text x="230" y="420" font-size="24" font-weight="700" fill="#0b1f3a" text-anchor="middle" dominant-baseline="middle">Bath</text>
+<text x="230" y="449" font-size="18" font-weight="400" fill="#5b6577" text-anchor="middle" dominant-baseline="middle">+ laundry</text>
+<text x="230" y="478" font-size="18" font-weight="400" fill="#5b6577" text-anchor="middle" dominant-baseline="middle">4.8 m²</text>
+<polygon points="340,0 750,0 750,560 340,560" fill="#f7f3ea" stroke="#0b1f3a" stroke-width="3"/>
+<text x="545" y="243" font-size="30" font-weight="700" fill="#0b1f3a" text-anchor="middle" dominant-baseline="middle">Living / Dining</text>
+<text x="545" y="279" font-size="24" font-weight="400" fill="#5b6577" text-anchor="middle" dominant-baseline="middle">+ Kitchen</text>
+<text x="545" y="315" font-size="24" font-weight="400" fill="#5b6577" text-anchor="middle" dominant-baseline="middle">23.0 m²</text>
+</g>
+<g stroke="#b47a22" stroke-width="2"><line x1="70" y1="35" x2="820" y2="35"/><line x1="70" y1="25" x2="70" y2="45"/><line x1="820" y1="25" x2="820" y2="45"/><line x1="35" y1="70" x2="35" y2="630"/><line x1="25" y1="70" x2="45" y2="70"/><line x1="25" y1="630" x2="45" y2="630"/></g>
+<text x="445" y="22" font-size="24" font-weight="600" fill="#b47a22" text-anchor="middle">7.5 m</text>
+<text x="22" y="350" font-size="24" font-weight="600" fill="#b47a22" text-anchor="middle" transform="rotate(-90 22 350)">5.6 m</text>
+</svg>
