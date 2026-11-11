@@ -104,11 +104,23 @@
       addFiles(e.dataTransfer.files);
     });
 
-    /* ---- "Ask about this plan" starts the comments for the visitor ---- */
+    /* ---- "Ask about this plan" fills the comments with that plan and prompts ---- */
+    const msg = form.querySelector("#message");
+    const PLAN_LINE = /^I'd like a quote for the .+ plan.*$/m;
     document.querySelectorAll(".model-link").forEach((link) =>
       link.addEventListener("click", () => {
-        const msg = form.querySelector("#message");
-        if (!msg.value.trim()) msg.value = "I'd like a quote for one of your floor plans.";
+        const card = link.closest(".model-card");
+        const name = card.querySelector("h3").textContent.trim();
+        const specs = card.querySelector(".model-purpose-tag").textContent.replace(/\s*·\s*/g, ", ").trim();
+        const line = "I'd like a quote for the " + name + " plan (" + specs + ").";
+        const current = msg.value.trim();
+        if (!current) {
+          msg.value = line + "\n\nProperty address: \nApprox. block size: \nWhat it's for (rental, family, studio): \nAnything else we should know: ";
+        } else if (PLAN_LINE.test(msg.value)) {
+          msg.value = msg.value.replace(PLAN_LINE, line);
+        } else {
+          msg.value = line + "\n\n" + msg.value;
+        }
       })
     );
 
