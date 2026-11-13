@@ -260,6 +260,8 @@ img { max-width: 100%; display: block; }
 .footer-logo { display: inline-block; margin-bottom: 24px; }
 .footer-logo img { height: 38px; width: auto; display: block; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+.footer-bottom a { color: rgba(255,255,255,.85); text-transform: none; letter-spacing: 0.02em; }
+.footer-bottom a:hover { color: var(--paper); text-decoration: underline; }
 
 /* ---------- Reveal ---------- */
 .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
