@@ -124,14 +124,49 @@
       })
     );
 
-    form.addEventListener("submit", (e) => {
+    /* ---- Send to Formspree; show a real error if it fails ---- */
+    const formError = document.getElementById("formError");
+    const success = document.getElementById("formSuccess");
+    const successNote = document.getElementById("formSuccessNote");
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitLabel = submitBtn.innerHTML;
+    const FALLBACK = "Something went wrong sending your request. Please try again, or email info@ablebusiness.com.au.";
+
+    function send(data) {
+      return fetch(form.action, { method: "POST", headers: { Accept: "application/json" }, body: data });
+    }
+    function done(note) {
+      form.querySelector(".form-fields").style.display = "none";
+      successNote.textContent = note || "";
+      success.classList.add("show");
+    }
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      formError.textContent = "";
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      form.querySelector(".form-fields").style.display = "none";
-      document.getElementById("formSuccess").classList.add("show");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+      try {
+        const res = await send(new FormData(form));
+        if (res.ok) return done();
+        // If attachments were refused, send the details without them
+        if (files.length) {
+          const lite = new FormData(form);
+          lite.delete("attachments");
+          const res2 = await send(lite);
+          if (res2.ok) return done("Your attachments could not be uploaded. Please email them to info@ablebusiness.com.au.");
+        }
+        const data = await res.json().catch(() => null);
+        formError.textContent = data && data.errors && data.errors.length ? data.errors.map((x) => x.message).join(", ") : FALLBACK;
+      } catch (err) {
+        formError.textContent = FALLBACK;
+      }
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = submitLabel;
     });
   }
 })();
