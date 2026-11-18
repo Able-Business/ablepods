@@ -19,8 +19,10 @@
 <meta property="og:url" content="https://www.ablepods.com.au/" />
 <meta property="og:title" content="Arlo | Granny Flats in NSW" />
 <meta property="og:description" content="Granny flats for NSW backyards. Five floor plans designed to NSW granny flat rules. We manage approval and the build with a licensed builder." />
-<meta property="og:image" content="https://www.ablepods.com.au/images/og-image.png" />
-<meta property="og:image:alt" content="Arlo logo" />
+<meta property="og:image" content="https://www.ablepods.com.au/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Arlo Granny Flats logo over a single-storey granny flat" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- Business details for search engines -->
@@ -32,7 +34,8 @@
   "legalName": "Able Business Pty Ltd",
   "url": "https://www.ablepods.com.au/",
   "logo": "https://www.ablepods.com.au/images/arlo-logo.png",
-  "image": "https://www.ablepods.com.au/images/og-image.png",
+  "image": "https://www.ablepods.com.au/images/og-image.jpg",
+  "email": "info@ablebusiness.com.au",
   "description": "Granny flats for NSW backyards, designed to NSW granny flat rules. Feasibility, approval and the build managed with a licensed builder.",
   "areaServed": { "@type": "State", "name": "New South Wales" }
 }
@@ -40,7 +43,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=261113c" />
+<link rel="stylesheet" href="styles.css?v=261118a" />
 <script>document.documentElement.className += " js";</script>
 </head>
 <body>
@@ -48,13 +51,19 @@
 <!-- ============== NAV ============== -->
 <nav class="nav" id="nav">
   <a href="#top" class="brand"><img src="images/arlo-horizontal.svg" alt="Arlo Granny Flats" width="518" height="188" /></a>
-  <a href="#quote" class="btn btn-solid nav-cta">Free quote</a>
+  <div class="nav-right">
+    <a href="#models" class="nav-link">Floor plans</a>
+    <a href="#quote" class="btn btn-solid nav-cta">Free quote</a>
+  </div>
 </nav>
 
 <!-- ============== HERO ============== -->
 <header class="hero" id="top">
   <div class="hero-bg">
-    <img src="images/photos/hero-1400.jpg" srcset="images/photos/hero-800.jpg 800w, images/photos/hero-1400.jpg 1400w, images/photos/hero-2000.jpg 2000w" sizes="max(100vw, 133vh)" width="2000" height="1500" alt="Single-storey granny flat with a garden path and lawn" fetchpriority="high" />
+    <picture>
+      <source media="(max-aspect-ratio: 3/4)" srcset="images/photos/hero-portrait-600.jpg 600w, images/photos/hero-portrait-900.jpg 900w" sizes="100vw" />
+      <img src="images/photos/hero-1400.jpg" srcset="images/photos/hero-800.jpg 800w, images/photos/hero-1400.jpg 1400w, images/photos/hero-2000.jpg 2000w" sizes="max(100vw, 133vh)" width="2000" height="1500" alt="Single-storey granny flat with a garden path and lawn" fetchpriority="high" />
+    </picture>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-frame"></div>
@@ -141,7 +150,7 @@
 
       <article class="model-card">
         <div class="model-media plan">
-          <img class="plan-img" src="images/plans/plan-d.svg" alt="Compact granny flat floor plan, 1 bed, 1 bath, ~42 m²" loading="lazy" decoding="async" />
+          <button type="button" class="plan-zoom" aria-label="Enlarge the Compact floor plan"><img class="plan-img" src="images/plans/plan-d.svg" alt="Compact granny flat floor plan, 1 bed, 1 bath, ~42 m²" loading="lazy" decoding="async" /><span class="zoom-hint" aria-hidden="true">Enlarge</span></button>
           <span class="model-badge">Most compact</span>
         </div>
         <div class="model-body">
@@ -155,7 +164,7 @@
 
       <article class="model-card">
         <div class="model-media plan">
-          <img class="plan-img" src="images/plans/plan-c.svg" alt="Courtyard granny flat floor plan, 2 bed, 1 bath, ~59 m²" loading="lazy" decoding="async" />
+          <button type="button" class="plan-zoom" aria-label="Enlarge the Courtyard floor plan"><img class="plan-img" src="images/plans/plan-c.svg" alt="Courtyard granny flat floor plan, 2 bed, 1 bath, ~59 m²" loading="lazy" decoding="async" /><span class="zoom-hint" aria-hidden="true">Enlarge</span></button>
           <span class="model-badge">Private courtyard</span>
         </div>
         <div class="model-body">
@@ -169,7 +178,7 @@
 
       <article class="model-card">
         <div class="model-media plan">
-          <img class="plan-img" src="images/plans/plan-e.svg" alt="Dual Suite granny flat floor plan, 2 bed, 2 bath, ~59 m²" loading="lazy" decoding="async" />
+          <button type="button" class="plan-zoom" aria-label="Enlarge the Dual Suite floor plan"><img class="plan-img" src="images/plans/plan-e.svg" alt="Dual Suite granny flat floor plan, 2 bed, 2 bath, ~59 m²" loading="lazy" decoding="async" /><span class="zoom-hint" aria-hidden="true">Enlarge</span></button>
           <span class="model-badge">Two bathrooms</span>
         </div>
         <div class="model-body">
@@ -183,7 +192,7 @@
 
       <article class="model-card">
         <div class="model-media plan">
-          <img class="plan-img" src="images/plans/plan-b.svg" alt="Front-to-Back granny flat floor plan, 2 bed, 1 bath, ~60 m²" loading="lazy" decoding="async" />
+          <button type="button" class="plan-zoom" aria-label="Enlarge the Front-to-Back floor plan"><img class="plan-img" src="images/plans/plan-b.svg" alt="Front-to-Back granny flat floor plan, 2 bed, 1 bath, ~60 m²" loading="lazy" decoding="async" /><span class="zoom-hint" aria-hidden="true">Enlarge</span></button>
           <span class="model-badge">Most privacy</span>
         </div>
         <div class="model-body">
@@ -197,7 +206,7 @@
 
       <article class="model-card">
         <div class="model-media plan">
-          <img class="plan-img" src="images/plans/plan-a.svg" alt="Linear granny flat floor plan, 2 bed, 1 bath, ~60 m²" loading="lazy" decoding="async" />
+          <button type="button" class="plan-zoom" aria-label="Enlarge the Linear floor plan"><img class="plan-img" src="images/plans/plan-a.svg" alt="Linear granny flat floor plan, 2 bed, 1 bath, ~60 m²" loading="lazy" decoding="async" /><span class="zoom-hint" aria-hidden="true">Enlarge</span></button>
           <span class="model-badge">Simplest layout</span>
         </div>
         <div class="model-body">
@@ -286,6 +295,12 @@
   </div>
 </footer>
 
-<script src="script.js?v=261113c"></script>
+<dialog class="plan-dialog" id="planDialog" aria-label="Floor plan">
+  <button type="button" class="plan-dialog-close" aria-label="Close">Close ×</button>
+  <p class="plan-dialog-hint">Swipe to move around the plan</p>
+  <div class="plan-dialog-scroll" id="planDialogScroll"><img id="planDialogImg" src="" alt="" /></div>
+</dialog>
+
+<script src="script.js?v=261118a"></script>
 </body>
 </html>

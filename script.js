@@ -28,6 +28,31 @@
   );
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
+  /* ---- Floor plans: tap to view full size ---- */
+  const dialog = document.getElementById("planDialog");
+  if (dialog && dialog.showModal) {
+    const dImg = document.getElementById("planDialogImg");
+    document.querySelectorAll(".plan-zoom").forEach((btn) =>
+      btn.addEventListener("click", () => {
+        const img = btn.querySelector("img");
+        dImg.src = img.currentSrc || img.src;
+        dImg.alt = img.alt;
+        dialog.showModal();
+        // On phones the plan is wider than the screen; start in the middle
+        const sc = document.getElementById("planDialogScroll");
+        const centre = () => { sc.scrollLeft = (sc.scrollWidth - sc.clientWidth) / 2; sc.scrollTop = 0; };
+        if (dImg.complete) centre(); else dImg.onload = centre;
+        document.body.classList.add("no-scroll");
+      })
+    );
+    dialog.querySelector(".plan-dialog-close").addEventListener("click", () => dialog.close());
+    // Close when tapping outside the plan
+    dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener("close", () => document.body.classList.remove("no-scroll"));
+  } else {
+    document.querySelectorAll(".plan-zoom .zoom-hint").forEach((h) => h.remove());
+  }
+
   /* ---- Lead form: submit ---- */
   const form = document.getElementById("leadForm");
   if (form) {
@@ -48,6 +73,9 @@
         } else {
           msg.value = line + "\n\n" + msg.value;
         }
+        // Put the cursor in the first empty field so they can start typing
+        const next = [...form.querySelectorAll("#name, #email, #postcode")].find((el) => !el.value.trim()) || msg;
+        setTimeout(() => next.focus({ preventScroll: true }), 0);
       })
     );
 
